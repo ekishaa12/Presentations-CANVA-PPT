@@ -24,17 +24,19 @@ A fresh-context reviewer scored each slide on the 7 charter criteria. Pass = ave
 | Slide | Page ID | Round 1 | Round 2 | Round 3 |
 |---|---|---|---|---|
 | 1 Cover | `PB2MZlNW41Hm7G7T` | 7.71 | **8.29 pass** | – |
-| 2 NOVA | `PBGxl07PSp7QMlpZ` | 7.29 | 7.43 | ROUND3_S2 |
+| 2 NOVA | `PBGxl07PSp7QMlpZ` | 7.29 | 7.43 | **8.29 pass** |
 | 3 Pretty Pixie / Why ESMOD | `PByXNv9tz148tKvg` | 7.71 | **8.00 pass** | – |
 | 4 Courrèges · then | `PBW1bfCKz8yZYpKp` | **8.14 pass** | **8.29 pass** | – |
 | 5 Courrèges · now | `PB5mCbzbkZtMHsXN` | 7.14 | **8.29 pass** | – |
-| 6 Alaïa & Demna | `PBqb4Lr0Lt2lZyp7` | 7.57 | 7.86 | ROUND3_S6 |
+| 6 Alaïa & Demna | `PBqb4Lr0Lt2lZyp7` | 7.57 | 7.86 | **8.43 pass** |
 | 7 Current phenomenon | `PBhX91jrwql1Nns7` | 7.57 | **8.57 pass** | – |
 | 8 Sources | `PBCDKslSW4JHyjXn` | 7.71 | **8.29 pass** | – |
 
-Small polish was also applied after round 2:
+Small polish was also applied after the reviews:
 - Slide 1: the orchid was enlarged and now bleeds off the page.
 - Slide 3: the "Why ESMOD" column was narrowed to 400 px.
+- Slide 2: the orchid was dropped to 22 % opacity behind the Skills list.
+- Slide 6: the "One obsession" note was moved away from the ghost type, and the folio was moved to the bottom row.
 
 ## Frozen content (programmatic check, after the fixes)
 - **Text:** every string in `CONTENT_MANIFEST.json` is present unchanged on its slide, either as live text or as the exact alt text of a display or handwritten PNG. Nothing is missing and there are no whitespace near-misses.
