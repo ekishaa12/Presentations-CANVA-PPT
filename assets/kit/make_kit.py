@@ -369,3 +369,10 @@ if __name__ == '__main__' and 'slide4' in sys.argv[4:]:
 if __name__ == '__main__' and 'slide5' in sys.argv[4:]:
     text_png('Courrèges', PIN, 300, INK, 'title_courreges_script', pad=50)
     note_png('then and now', 'note_then_and_now', size=96)
+
+if __name__ == '__main__' and 'slide6' in sys.argv[4:]:
+    text_png('Alaïa', PIN, 260, INK, 'title_alaia', pad=50)
+    text_png('&', COR, 240, ROSE, 'title_amp', pad=40)
+    text_png('Demna', PIN, 260, INK, 'title_demna', pad=50)
+    note_png('One\nobsession\nthe\nsilhouette.', 'note_one_obsession', size=96)
+    note_png('with the logo removed,\nis the image still luxury?', 'note_logo_removed', size=84)
