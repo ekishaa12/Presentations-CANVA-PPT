@@ -1,45 +1,114 @@
-# CHANGELOG — Shape as Strategy v4 (redesign)
+# CHANGELOG — Shape as Strategy, ESMOD Portfolio (creative rebuild)
 
-## Designs
-- Source (read-only, never edited): `DAHbdUqdmXU`, "Shape as Strategy – v2 (working copy)". It was resolved from https://canva.link/ww2ho1fyqv97176.
-- Working copy (all edits here): `DAHbgHFq6rM`, "Shape as Strategy – v4 (redesign)".
-  - Edit: https://www.canva.com/d/2GfXRaYXUVmCqlo
-  - View: https://www.canva.com/d/sPFyOg82XvfkonZ
-- Never touched: v1 `DAHbdcxBdW8`, v2 `DAHbdUqdmXU`, mature v3 `DAHbe2V7_bw`, binder v3 `DAHbfDlGsaE`.
+Design `DAHbgasWgM4`, title "Shape as Strategy – ESMOD Portfolio". The deck is pages 1–8. Pages 9–18 are the old pages and the two unused cover variants (B foil & script, C misted love letter): **delete pages 9–18 by hand** in Canva (there is no delete-page tool).
 
-## Decor assets (code-drawn with `canvas-design`, `assets/`, no AI)
-| ID | File | Canva asset ID | Used on |
+Direction: `DA_CHARTER.md` ("Archive Blush", `assets/kit/PHILOSOPHY.md`). Kit generator: `assets/kit/make_kit.py`. Canva asset IDs: `assets/kit/canva_ids.json`. Fonts to apply by hand: `FONT_TODO.md`.
+
+## Pages and review scores
+Each slide was reviewed by a fresh-context reviewer on the 7 charter criteria (pass = average ≥ 8, none < 7, integrity = 10), max 3 rounds, then a whole-deck review.
+
+| Slide | Page ID | Composition (source) | Scores |
 |---|---|---|---|
-| A1 | `assets/A1_blush_wash.png` | `MAHbgMK4Y6c` | slide 1 background |
-| A2 | `assets/A2_crumple_grain.png` | `MAHbgPRE1NA` | uploaded, not placed |
-| A3 | `assets/A3_halftone_grain.png` | `MAHbgCevHU4` | uploaded, not placed |
-| A4 | `assets/A4_flourish_frame.png` | `MAHbgDRsztk` | slide 7, "my reading" |
-| A6 | `assets/A6_coffee_ring.png` | `MAHbgASWbu4` | slide 8 |
+| 1 Cover | `PB1c4zRg8m3T9hnN` | L1 pink poster + FF watercolour band | 8.29 (cover variant A, GATE 2) · final 8.71 |
+| 2 NOVA | `PBJb91nX9jHPpTbf` | L2 STYLING BOARD + L1 FAKE PLASTIC page | 7.0 → 7.86 → round 3 applied · final 8.29 |
+| 3 Pretty Pixie / Why ESMOD | `PBJBpyvHPpLzfmSr` | L1 pink sheet spread + letter page, WL frame | 7.57 → 8.29 · final 8.43 |
+| 4 Courrèges then | `PBtP99FwGZ4ClyC2` | L1 b/w spread with pink sheet over the left page | 7.57 → 8.00 → round 3 applied · final 8.86 |
+| 5 Courrèges now | `PBxGrYm47rVVfB7z` | L2 ULTIMATE EDIT cascade + timeline strip | 8.0 → polish · final 7.71 → strip/ground fix applied |
+| 6 Alaïa & Demna | `PB2D3BKSnsnp2vXp` | L1 legs spread (fold, outer text columns) | 8.0 → polish · final 8.86 |
+| 7 Current phenomenon | `PBGQ8rMYFcV0Zhrs` | L1 coffee-ring poster + letter cards | 7.6 → round 2 applied · final 8.14 → card cascade fix applied |
+| 8 Sources | `PBcqPY59vm3HWq0R` | L1 exhibition poster, framed halftone panel | 7.9 → round 2 applied · final 8.43 → foil strip removed |
 
-- The cover wordmark "Portfolio" is a vector outline of Pinyon Script (OFL font), drawn with fontTools. It replaces the old blue vector. Element: `PBLyg1NDD9Z1XnfZ-LB3gL3GK33HbhvTd`.
-- Stars, dot markers, crop marks and hairlines are Canva shapes drawn by path.
+Final whole-deck review: the system holds (header row, corner marks, folio, palette); no banned looks (binder, rings, tape, price tags, blue selection UI, candy pink, old hexes, rotated giant titles). Fixes from that review were applied to slides 5, 7 and 8 and were not re-scored.
+
+## Frozen content (GATE 3, programmatic check)
+- Text: every string in `CONTENT_MANIFEST.json` is present unchanged on its slide, as live text or as the exact alt text of a display PNG. Slides 2–8: no missing, no extra. Slide 1: no missing; the extras are the decorative display words listed below.
+- Images: 21 of 21 content images placed; largest aspect-ratio deviation 0.23 %, crop under 0.5 %.
+- Slide order and reading order unchanged.
+- Contact sheet: PNG export of pages 1–8 succeeded (job `b15c7f8b-1dd8-43fc-ba33-e8233b8f42ce`), but the container network blocks `export-download.canva.com` (403), so the PNGs could not be saved to the repo.
+
+## Added decorative micro-texts (not in the manifest)
+Page numbers, the folio and dot-labels that reuse words already in the deck.
+
+| Slide | Micro-texts |
+|---|---|
+| 1 Cover | `ESMOD PARIS · 2026`, `01/08`, `• shape`, `• strategy` |
+| 2 NOVA | `02/08`, `• portal`, `ESMOD PARIS · 2026`, `• wardrobe`, `• salon` |
+| 3 Pretty Pixie / Why ESMOD | `03/08`, `• Gurugram`, `• New Delhi`, `ESMOD PARIS · 2026` |
+| 4 Courrèges then | `04/08`, `• 1961`, `• white`, `• 1964`, `ESMOD PARIS · 2026` |
+| 5 Courrèges now | `05/08`, `then / now`, `ESMOD PARIS · 2026` |
+| 6 Alaïa & Demna | `06/08`, `• silhouette`, `• shoulder`, `• hem`, `ESMOD PARIS · 2026` |
+| 7 Current phenomenon | `07/08`, `• attention`, `• desire`, `ESMOD PARIS · 2026` |
+| 8 Sources | `08/08`, `• archive`, `ESMOD PARIS · 2026` |
+
+Decorative display words on the cover (PNG): `Portfolio` (from the header "EKISHA SACHDEVA'S PORTFOLIO"), and the name "Ekisha Sachdeva" (from "(Ekisha Sachdeva)") as a Pinyon signature and as a dot-matrix lockup. The signature and dot-matrix name also appear as decoration on slides 3, 6 and 8.
+
+## Display PNGs (alt text = exact manifest string)
+Rendered with Pinyon Script (titles), Cormorant Garamond tracked caps (PRETTY PIXIE, COURRÈGES, ESMOD, &) and Reenie Beanie (handwritten notes).
+
+| Slide | Alt texts |
+|---|---|
+| 1 | `Portfolio`; `Ekisha Sachdeva (signature)`; `Ekisha Sachdeva (dot-matrix script after Studio Nomad __ Script Family.jpeg)` |
+| 2 | `nova`; `discovered\nroom by\nroom.`; `circles → movement`; `curtains,\nnot\nwalls` |
+| 3 | `PRETTY PIXIE`; `Why\nESMOD` |
+| 4 | `a silhouette that defined a decade`; `COURRÈGES` |
+| 5 | `Courrèges`; `then and now` |
+| 6 | `Alaïa`; `&`; `Demna`; `One\nobsession\nthe\nsilhouette.`; `with the logo removed,\nis the image still luxury?` |
+| 7 | `When a designer moves,\ndoes desire move with them -\nor stay with the house?`; `signals, not proof of a cause.`; `my reading` |
+| 8 | `Sources &`; `image\ncredits` |
+
+## New images and decoration
+
+*Code-drawn* = original, generated by `assets/kit/make_kit.py`. *AI-generated* = Canva generate-image paper textures only (no people, garments or campaigns). *Cropped/cut from* = literal crop of a file in `Reference images/` (third-party; credits are the owner's decision).
+
+| Canva asset | Description and source | Slides |
+|---|---|---|
+| `MAHbgR5Ux5Y` | ES stamp, ESMOD PARIS · 2026 · SHAPE AS STRATEGY | 1, 2, 3, 4, 7, 8 |
+| `MAHbgRBUulw` | AI-generated crumpled blush pink card texture (tone after Flower Farm Business Card _ Business Card Design.jpeg) | 1, 8 |
+| `MAHbgSB1Xpc` | code-drawn halftone grain after wooyoung ateez.jpeg | 1, 4, 6, 8 |
+| `MAHbgSthTk8` | pencil double underline | 1, 3, 4, 6, 8 |
+| `MAHbgT6tVLQ` | watercolour band cropped from Flower Farm Business Card _ Business Card Design.jpeg (third-party reference) | 1, 3 |
+| `MAHbgUdg9To` | code-drawn crease overlay | 1, 2, 3, 4, 5, 6, 7, 8 |
+| `MAHbgV-bKp4` | code-drawn coffee rings after Layout coffee-ring poster | 1, 2, 3, 4, 5, 6 |
+| `MAHbgWrKuXs` | code-drawn deckled letter-paper sheet (after Layout handwritten-letter spread) | 1, 3, 5, 7 |
+| `MAHbgYKktMM` | pencil double underline | 1, 2, 3, 5, 7 |
+| `MAHbgYwWCU0` | code-drawn silver foil after Studio Nomad __ Script Family.jpeg | 1 |
+| `MAHbgZZvyXg` | grey caption card after the label in Studio Nomad __ Script Family.jpeg | 1, 3 |
+| `MAHbgb4oRBA` | pencil arrow | 1, 2, 5, 6, 7 |
+| `MAHbgdQGb1c` | e/s oval monogram (lockup after Flower Farm Business Card h/a mark) | 1, 2, 3, 4, 5, 8 |
+| `MAHbgeSDZEg` | pencil asterisk | 1, 2, 3, 5 |
+| `MAHbgfgYV6U` | script swash loop cropped from Studio Nomad __ Script Family.jpeg (third-party reference) | 1, 2, 3, 5, 8 |
+| `MAHbgQgbRwM` | code-drawn deckled cream board (after Layout STYLING BOARD) | 2 |
+| `MAHbgTmL8lA` | AI-generated blush parchment texture | 2, 4, 6, 7 |
+| `MAHbgXJU67E` | pencil circle scribble | 2, 5, 7 |
+| `MAHbgdYSKrA` | code-drawn deckled pink sheet (after Layout pink-sheet spread) | 2, 6 |
+| `MAHbgRoz3IQ` | script swash tail cropped from Studio Nomad __ Script Family.jpeg (third-party reference) | 3 |
+| `MAHbgTSHjLM` | code-drawn deckled pink sheet (after Layout pink-sheet spread) | 3, 4 |
+| `MAHbgWrNExc` | pencil bracket | 3 |
+| `MAHbgXFm7co` | Ekisha Sachdeva (signature, decor) | 3, 6, 8 |
+| `MAHbgaIm_BU` | code-drawn misted glass ground (after Истории • Instagram.jpeg) | 3, 5 |
+| `MAHbgcONmxY` | ink flourish frame, lettering erased, cut from Истории • Instagram.jpeg (third-party reference) | 3, 6 |
+| `MAHbgeNjN-g` | pencil loops | 3, 4 |
+| `MAHbgYfC9pk` | pencil circle scribble | 4 |
+| `MAHbgd_O8lM` | silver foil strip cropped from Studio Nomad __ Script Family.jpeg (third-party reference) | 4 |
+| `MAHbgSAKE88` | code-drawn aged letter paper (after Layout handwritten-letter spread) | 5, 6 |
+| `MAHbgXxW_jk` | code-drawn deckled cream board (after Layout STYLING BOARD) | 5, 7 |
+| `MAHbhFQjXmM` | code-drawn coffee rings after Layout coffee-ring poster | 7, 8 |
+| `MAHbgRLiy6g` | dot-matrix Ekisha Sachdeva (after Studio Nomad __ Script Family.jpeg dot script) | 8 |
+
+## Third-party copied elements (literal crops)
+
+| Element | Slides |
+|---|---|
+| watercolour band cropped from Flower Farm Business Card _ Business Card Design.jpeg (third-party reference) | 1 |
+| script swash loop cropped from Studio Nomad __ Script Family.jpeg (third-party reference) | 1, 2, 3, 5, 8 |
+| script swash tail cropped from Studio Nomad __ Script Family.jpeg (third-party reference) | 3 |
+| ink flourish frame, lettering erased, cut from Истории • Instagram.jpeg (third-party reference) | 3, 6 |
+| watercolour petal band cropped from Flower Farm Business Card _ Business Card Design.jpeg (third-party reference) | 3 |
+| silver foil strip cropped from Studio Nomad __ Script Family.jpeg (third-party reference) | 4 |
 
 ## Log
-- 2026-11-21: `copy-design` of `DAHbdUqdmXU` produced `DAHbgHFq6rM`. The title was changed and committed.
-- 2026-11-21: the 5 assets were uploaded through `upload-asset-from-url` from the public repo at commit `3dff142`.
-- 2026-11-21: slides 1–8 were restyled and committed, one page per transaction. The user pre-approved all gates ("ok for all dont ask again").
-  - Removed on every page: the binder frame (paper sheet, shadow stack, grain, wavy lines, fold, binding band, all 6 rings and their layers) and the old candy backdrops. The old decor went too: blue swirls, selection box, cursor, ellipse outlines, asterisks, tape, punch holes, ruled lines, swatches, and the blue or cyan cards.
-  - Applied: cream field `#f4efe6`, blush sheets `#f2d4df`, ivory offset sheets `#fbf8f2`. Ink `#23272d` / `#3a414a`, deep rose `#b45f82` for labels, rose `#d98aa8` for decor. Images became prints with a 10–12 px ivory border, some with ±2–3° tilt.
-  - Slide 6: the old fold (`LBdyW4xTpLjwJhHk`, `LBdMhxSXpRXv68gj`) was kept on purpose as the spread's fold.
-- 2026-11-21: QA passed.
-  - Every text string is identical to the source on all 8 slides, checked by programmatic multiset compare against the pre-edit data.
-  - 21 content images: slide 2 has 7, slide 4 has 3, slide 5 has 4, slide 6 has 7. All aspect ratios are unchanged (within 1%).
-  - The contact-sheet export ran, but the container network blocks the download host. Pages were checked from thumbnails instead.
-
-## Text-affecting changes
-Columns: slide, element ID, old → new, reason.
-
-| Slide | Element | Change | Why |
-|---|---|---|---|
-| 1 | `LBXdldDwJ3bjzvQN`, `LBxtNw9Vl9fj7Q5N` | size 26 → 22, bold → normal | quieter corner labels for the styling-board layout |
-| 1 | `LBQMN2D70G2NHRbp` | size 26 → 22, bold → normal, width 237 → 320, align start → end | right-aligned corner label |
-| 1 | `LBzWrMn42THNMF8Z` (`2026`) | size 28 → 22, bold → normal, width 62 → 320, align start → end | right-aligned corner label |
-| 1 | `LBfSx0cnvphgWmTV` | width 131 → 300, align start → end | right-aligned header |
-| 7 | `LBNfMckNV96RqvWM`, `LB6Ynrrsscy0S6H4` | size 36.8 → 26 | labels overlapped; same fix as handover note (font 26) |
-
-Text colours changed everywhere (palette swap). Colour is aesthetic, so it is not listed per element. No string, line break, line height or letter spacing was changed.
+- Kit built and uploaded (commits on `claude/dazzling-newton-unsxd2`, PNGs in `assets/kit/`).
+- GATE 2: cover variants A/B/C reviewed; A chosen (8.29). B and C remain on pages 17–18 for deletion.
+- Slides 2–8 built one by one, each committed in Canva right after the build, then reviewed and fixed (max 3 rounds).
+- GATE 3: programmatic text/image check, export attempt, whole-deck review; final fixes on slides 5 (letter-paper timeline strip, board at 70 % so the grain shows), 7 (letter cards stepped diagonally, ellipse no longer crosses text, stronger coffee rings), 8 (dark foil strip removed).
+- Known limits: live text still uses Canva's default font until `FONT_TODO.md` is applied; drop shadows are not available through the API; the ES stamp is faint on parchment grounds.
