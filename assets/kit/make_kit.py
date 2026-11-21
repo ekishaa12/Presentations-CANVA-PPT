@@ -361,3 +361,7 @@ def lockup_png(script, caps, name, col, s_size=300, c_size=110, track=26, pad=40
 if __name__ == '__main__' and 'slide3' in sys.argv[4:]:
     tracked_png('PRETTY PIXIE', 140, INK, 'title_pretty_pixie', track=22)
     lockup_png('Why', 'ESMOD', 'title_why_esmod', INK, xo=1.02, overlap=.55)
+
+if __name__ == '__main__' and 'slide4' in sys.argv[4:]:
+    tracked_png('COURRÈGES', 150, INK, 'title_courreges', track=24)
+    note_png('a silhouette that\ndefined a decade', 'note_silhouette_decade', size=88)
