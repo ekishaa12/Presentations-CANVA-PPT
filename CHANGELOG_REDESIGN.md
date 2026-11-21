@@ -82,7 +82,7 @@ Small polish was also applied after the reviews:
 | `MAHbjHBiACk` | code-drawn barcode |
 | `MAHbjNwzHuQ` | code-drawn spread gutter shadow |
 | `sc_*` (12 IDs in `canva_ids.json`) | code-drawn red ballpoint marks: circle, underline, arrow, asterisk, wave, cross, bracket, tick, loop |
-| `zt_*`, `zg_*`, `zn_*` | code-drawn display type, ghost type and handwritten notes (exact strings above). Two renders are newer: `zt_pixie_xl` (`MAHbjUynQA0`) and the ink `zt_courreges_ink` (`MAHbjTVtmrQ`), which replaced the white one. |
+| `zt_*`, `zg_*`, `zn_*` | code-drawn display type, ghost type and handwritten notes (exact strings above). Newer renders: `zt_pixie_xl` (`MAHbjUynQA0`), the ink `zt_courreges_ink` (`MAHbjTVtmrQ`), which replaced the white one, and the stacked `zt_nova_stack` (`MAHbkel6IfE`, "no / va"), which replaced the single-line `nova` on slide 2 at the student's request so it matches the other split titles. |
 
 The reference image `Reference images/zine_karmic_lesson.jpg` is used only as a style reference. Nothing is cropped from it.
 
