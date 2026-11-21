@@ -381,3 +381,27 @@ if __name__ == '__main__' and 'slide7' in sys.argv[4:]:
     text_png('When a designer moves,\ndoes desire move with them -\nor stay with the house?', PIN, 130, INK, 'title_question', pad=50, spacing=10)
     note_png('my reading', 'note_my_reading', size=100)
     note_png('signals, not proof of a cause.', 'note_signals', size=88)
+
+if __name__ == '__main__' and 'slide8' in sys.argv[4:]:
+    text_png('Sources &', PIN, 220, INK, 'title_sources', pad=50)
+    text_png('image\ncredits', PIN, 200, INK, 'title_image_credits', pad=50, spacing=-20)
+
+def script_amp(word, name, s_size=220, a_size=150, pad=50, gap=30):
+    def layer(txt, font, size):
+        f = ImageFont.truetype(font, size); tmp = ImageDraw.Draw(Image.new('L', (10, 10)))
+        bb = tmp.textbbox((0, 0), txt, font=f)
+        m = Image.new('L', (bb[2] - bb[0] + 20, bb[3] - bb[1] + 20), 0)
+        ImageDraw.Draw(m).text((10 - bb[0], 10 - bb[1]), txt, font=f, fill=255)
+        return m.crop(m.getbbox())
+    w, a = layer(word, PIN, s_size), layer('&', COR, a_size)
+    W = w.size[0] + gap + a.size[0] + 2 * pad; H = max(w.size[1], a.size[1]) + 2 * pad
+    mw = Image.new('L', (W, H), 0); mw.paste(w, (pad, pad))
+    ma = Image.new('L', (W, H), 0); ma.paste(a, (pad + w.size[0] + gap, pad + int(w.size[1] * .55) - a.size[1] // 2 + 20))
+    aw, aa = np.asarray(mw, float) / 255, np.asarray(ma, float) / 255
+    al = np.clip(aw + aa, 0, 1); n = .9 + .1 * fbm(W, H, 2, 30)
+    col = np.where((aa > aw)[..., None], ROSE, INK)
+    out = np.zeros((H, W, 4)); out[..., :3] = col; out[..., 3] = al * n * 255
+    Image.fromarray(out.astype(np.uint8), 'RGBA').save(f'{OUT}/{name}.png'); print('ok', name, W, H)
+
+if __name__ == '__main__' and 'slide8b' in sys.argv[4:]:
+    script_amp('Sources', 'title_sources')
