@@ -365,3 +365,7 @@ if __name__ == '__main__' and 'slide3' in sys.argv[4:]:
 if __name__ == '__main__' and 'slide4' in sys.argv[4:]:
     tracked_png('COURRÈGES', 150, INK, 'title_courreges', track=24)
     note_png('a silhouette that\ndefined a decade', 'note_silhouette_decade', size=88)
+
+if __name__ == '__main__' and 'slide5' in sys.argv[4:]:
+    text_png('Courrèges', PIN, 300, INK, 'title_courreges_script', pad=50)
+    note_png('then and now', 'note_then_and_now', size=96)
