@@ -1,160 +1,82 @@
-# REDESIGN PLAN — Shape as Strategy v4 (`DAHbgHFq6rM`)
+# REDESIGN PLAN — v5 (clean build)
 
-Status: draft for GATE 1. Nothing edited on the slides yet.
-Sources: `Layout/` (2 screenshots) give the layout. `Reference images/` (4 files) give the aesthetic. Text, the 21 content images, slide order and reading order stay frozen (handover Section 3).
+This plan replaces the v4 plan, which is in git history. Content comes from `CONTENT_MANIFEST.json`. Every visual decision comes from `Layout/` (L1, L2) or `Reference images/` (FF, SN, WL, WY). Nothing comes from the old deck. The user approved every gate in advance ("ok for all from now").
 
-## 0. Layout grammar (from `Layout/`)
-These rules apply on every slide.
-- **Field.** Full-bleed flat paper colour. Wide empty areas are intentional: the poster with the large empty field, the styling board.
-- **Sheets.** Coloured rectangles (pink or cream) overlap one another and the photos, slightly offset. This is the "pink sheet over b/w spread" motif. Text sits on sheets.
-- **Prints.** Content images get a white or ivory border (12–16 px) and a soft shadow. A few are stacked with a slight tilt of ±2–4°. Most stay straight, so the page reads as editorial and not as scrapbook.
-- **Micro-labels.** Four tiny tracked-caps labels sit in the corners of each slide, as on the styling board ("STYLING · BOARD · STUDIO · AETHER"). The two existing header strings fill the top corners. Bottom corners stay empty or carry decor. No new text strings.
-- **Captions.** Small and close to their image. A dot-label style ("• caption") borrows the halftone portrait's annotations. The dot is a shape, not a text character, so the strings stay unchanged.
-- **Margins.** 80 px outer margin. A 12-column grid at 1920: column 120, gutter 40.
+Short names for the source files:
+- L1 = `Layout/Screenshot 2026-11-21 at 00.21.42.png` (740×1318)
+- L2 = `Layout/Screenshot 2026-11-21 at 00.22.16.png` (740×984)
+- FF = `Reference images/Flower Farm Business Card _ Business Card Design.jpeg`
+- SN = `Reference images/Studio Nomad __ Script Family.jpeg`
+- WL = `Reference images/Истории • Instagram.jpeg` ("With Love")
+- WY = `Reference images/wooyoung ateez.jpeg` ("Velle est passé")
 
-## 1. Per-slide layout
-
-### Slide 1 — Cover
-- Field: blush watercolour wash (asset A1) over cream.
-- "Portfolio": large script, centred slightly left at about x480–1440, y380–700.
-- The 4 labels go to the 4 corners of an invisible frame around the wordmark, like the styling-board corners:
-  - `(Ekisha Sachdeva)` at top-left.
-  - `(shape as strategy)` at top-right.
-  - `ESMOD Paris` at bottom-left.
-  - `2026` at bottom-right.
-- Header strings stay in the page corners.
-- A cluster of 4-point stars (A5) near the wordmark. A thin flourish swash (A4) under it.
-- Delete: the binder frame, the blue swirls, the selection box, the handles, the cursor arrow and the pink outline boxes.
-
-### Slide 2 — NOVA
-- Left column (x80–640): `nova` in big script. Under it the blurb, the journey line and the three lists on a cream sheet (x60–660, full height).
-- Right side: a moodboard-style board.
-  - The wardrobe moodboard and the floor plan are large prints, side by side at the top.
-  - The poster and the 4 reference photos (salon, rail, reception, shoes) form a lower row of smaller prints. Some overlap.
-- Captions sit as dot-labels next to their prints.
-- The notes "curtains, not walls", "discovered room by room." and "circles → movement" become handwritten-style accents near the floor plan.
-- Reading order kept: title, blurb, journey, skills and learned, then images in the order moodboard, plan, poster, salon, rail, reception, shoes.
-
-### Slide 3 — Pretty Pixie + Why ESMOD
-- Field: cream.
-- `PRETTY PIXIE` stays vertical at the left edge, in script or display.
-- The internship text sits in a column at x260–1060.
-- "Why ESMOD": a pink sheet (x1180–1880), overlapping onto the field by a few px with a slight offset second sheet behind. This is the layout's double-sheet motif.
-- The `02 - EXPERIENCE & MOTIVATION` tag stays at the bottom of the sheet.
-- No images.
-
-### Slide 4 — Courrèges THEN
-- The Vogue 1964 spread is a large print, centre-left (about 1000x649 kept). It sits on a pale field.
-- A pink sheet overlaps its lower-left corner. It carries Identity, Codes, Today's Client and Legacy Moment. This mirrors the "pink sheet over b/w spread" layout.
-- `COURRÈGES` stays vertical at the left.
-- The two McCall's prints are stacked and slightly tilted at the bottom right, with the long caption under them.
-- The right column keeps the annotations ("published in Vogue…", "a silhouette…", "Now").
-
-### Slide 5 — Courrèges NOW
-- The faded campaign image becomes a full-height bleed on the right half, at low opacity, as it is today.
-- The campaign cut-out and the 2 SS27 runway prints are stacked white-bordered prints on top of it.
-- Left side:
-  - `Courrèges` in big script, with `then and now` under it.
-  - The timeline sits as a row of 5 dot-labels on one hairline.
-  - The three text blocks (Communication, What I question, My proposal) sit in columns on a cream sheet.
-- "codes so clear, always in style." is a script accent.
-
-### Slide 6 — Alaïa & Demna
-- A two-page spread split at x960, with a faint fold shadow (not the binder).
-- Left page: Alaïa.
-  - The sculpted dress is a large print.
-  - The atelier photo, the logo-removal study and the Lebon campaign sit as a row of smaller prints.
-- Right page: Demna.
-  - Gucci look 44 is a large print.
-  - La Famiglia and The Characters are smaller prints.
-- `Alaïa`, `&` and `Demna` keep their vertical or stacked placement.
-- Centre notes sit on a narrow pink sheet across the fold: "Two outsiders…" and "One obsession…".
-- The old pink blocks become sheets in the new palette.
-
-### Slide 7 — Current phenomenon
-- The question in big type at the top-left.
-- Three pink sheets, equal width, in place of the price tags. Each sheet holds a label, a big number, a description and a source.
-- The "my reading" card is a cream card with a faint flourish frame (A4). It sits right and is slightly overlapping.
-- The caveat lines are small, at the top-right.
-- Large empty field around the sheets.
-
-### Slide 8 — Sources
-- A cream styling-board card covers most of the page.
-- `Sources &` and `image credits` in script, at the left. `research that shaped this project.` sits under them.
-- `IMAGES` and `TEXT & DATA` lists are small type in two columns.
-- Corner micro-labels carry the header strings.
-- Delete: the blue taped card and the swatch legend.
-
-## 2. Palette
-| Role | Hex |
-|---|---|
-| Field, cream | `#f4efe6` |
-| Paper, ivory (print borders, cards) | `#fbf8f2` |
-| Blush pink (sheets) | `#f2d4df` |
-| Rose pink (accents, numbers) | `#d98aa8` |
-| Deep rose (watercolour shade, rare) | `#b45f82` |
-| Silver grey (hairlines, foil) | `#c9ccd1` |
-| Ink blue-grey (body text) | `#3a414a` |
-| Ink deep (titles) | `#23272d` |
-| Sepia (stains, rare accent) | `#a9825e` |
-
-No candy colours. Contrast: ink text on blush or cream is about 9:1 or better. Rose `#d98aa8` is never used for body text, only for big numbers and decor.
-
-## 3. Type plan
-`format_text` cannot change font family. Fonts are applied by hand from `FONT_TODO.md`. That file lists each locator ID, its current font and the font to apply.
-
-| Role | Font (Canva) | Size | Elements |
+## 1. Palette (sampled with PIL, median of the region)
+| Role | Hex | File | Region (x0,y0,x1,y1) |
 |---|---|---|---|
-| Display script | **Pinyon Script** (fallback: Great Vibes) | 120–260 | `nova`, `PRETTY PIXIE`?, `COURRÈGES`?, `Courrèges`, `Alaïa`, `&`, `Demna`, `Sources &`, `image credits`, short accent notes |
-| Headings, serif | **Cormorant Garamond** semibold | 32–56 | `The journey`, `Why ESMOD`, `What I question`, the question on slide 7, and similar |
-| Body, serif | **Cormorant Garamond** medium | 20–24 | All paragraphs and lists |
-| Labels and captions, sans | **Montserrat** regular, tracked caps | 12–14 | Header strings, section tags, captions, `HISTORICAL REFERENCE`, and similar |
-| Numbers | Cormorant Garamond light | 96–120 | `+42%`, `+525%`, `+49%` |
+| Poster pink field (cover) | `#f3bdcc` | L1 | (60,200,300,420), top-left pink poster |
+| Pink sheet / page | `#dbaeba` | L2 | (500,210,570,300), spread series, pink page |
+| Dusty sheet | `#cba4ad` | L1 | (100,720,170,860), spread with pink sheet |
+| Mauve (labels, notes) | `#8a6674` | L1 | (400,520,520,600), "FAKE PLASTIC" spread |
+| Board cream | `#f6f2eb` | L2 | (130,395,330,420), STYLING BOARD card |
+| Poster white (paper) | `#f6f6f5` | L1 | (425,70,445,300), exhibition poster paper |
+| Halftone grey (panel, fold) | `#c7c8c4` | L1 | (440,120,580,250), exhibition poster photo |
+| Rose accent (numbers, labels) | `#c16c84` | FF | (250,380,420,430), watercolour |
+| Script ink (titles) | `#120a12` | SN | dark pixels in (40,60,700,440), script |
+| Body ink | `#54585c` | WY | dark pixels in (320,480,640,700), "Velle" script |
+| Frame line ink | `#6c756f` | WL | dark pixels in (30,100,710,600), swirl frame |
+| Silver | `#bbc3d4` | SN | (250,500,500,600), foil |
+| Stain sepia | `#b67f4d` | L1 | dark pixels in (40,900,300,1150), coffee-ring poster |
 
-- The script is used only for short words (1–2 words). Long or all-caps titles (`PRETTY PIXIE`, `COURRÈGES`) may stay in the serif. I will decide by eye at the slide 1 test.
-- Sizes, colours, line height and alignment are set by tool. The CHANGELOG logs any size, width or wrapping change.
-- Cover "Portfolio": I will outline Pinyon Script glyphs into SVG paths and replace the old blue vector. This is allowed for the cover only. I will do it with `fonttools` and the OFL font file. If that fails, "Portfolio" becomes a text box and you set the font by hand.
+None of these is one of the banned old hex codes. The raw sample file is in the scratchpad (`palette.json`).
 
-## 4. Decor assets (`canvas-design`, original, no tracing)
-| ID | Asset | Format | Used on |
+## 2. Type plan
+**Option A, recommended: chosen under the blanket ok.** All text stays live, built with `add_text`. You set the fonts by hand from `FONT_TODO.md`:
+- Script for titles and short notes: **Pinyon Script**. Source: SN (script family) and WL (copperplate).
+- Serif for headings and body: **Cormorant Garamond**. Source: FF ("anna mercer" serif) and L1 FAKE PLASTIC body.
+- Sans for labels: **Montserrat**. Source: L2 STYLING BOARD corner labels and L1 poster micro text.
+
+Why A over B: live text keeps the programmatic text QA exact and stays editable. B (PNG titles) would break both.
+
+The cover "Portfolio" is a vector outline of Pinyon Script. Source: SN. Outlining is allowed for the cover only.
+
+## 3. Slide → composition map (Layout DNA)
+| Slide | Composition source | How it maps |
+|---|---|---|
+| 1 Cover | L1 top-left **pink poster**: images in a top band, huge empty pink field, tiny marks | `#f3bdcc` field. A literal FF watercolour crop sits in the top band. "Portfolio" sits low right. The 4 labels are tiny marks down the left edge. |
+| 2 NOVA | L2 **STYLING BOARD** (cream card, asymmetric overlapping images, corner labels) + L1 **FAKE PLASTIC** left page (serif title, body columns) | Left page: title + text columns. Right: cream board with the 7 images overlapping; captions as corner and edge labels. |
+| 3 Pretty Pixie / Why ESMOD | L1 **spread with pink sheet** (body on sheet, left page) + **marker quote** (right page) | White spread, fold line. Left: pink sheet with the internship text. Right: "Why ESMOD" large, panel text below. |
+| 4 Courrèges then | L1 **b/w spread with pink sheet over the left page** | Vogue 1964 spread is a large image. A dusty pink sheet overlaps its left margin and holds the 4 blocks. McCall's and annotations sit in the band below or to the side. |
+| 5 Courrèges now | L2 **ULTIMATE EDIT cascade** (white-bordered photos stepping diagonally, tiny caption right) | Right: cascade of the campaign cut-out and 2 SS27 photos over a large faded campaign copy. Left: title, a stacked timeline column, 3 text columns. |
+| 6 Alaïa & Demna | L1 **legs/shoes spread** (images across both pages, narrow text column at the outer edge) | Fold at 960. Alaïa images on the left page, Demna on the right. Text columns sit at the outer edges. Shared notes in a bottom band. |
+| 7 Phenomenon | L1 **coffee-ring poster** (white field, large stains, small text block lower left, italic quote right) | Stains top-left. Stats across the top right. "my reading" lower left. The question is a large italic quote at lower right. |
+| 8 Sources | L1 **exhibition poster** (white paper, thin frame, framed halftone panel, title column left, caption line at the bottom) | Thin frame line. Title column left plus a literal SN foil strip. Lists on a halftone panel. Headers along the bottom. |
+
+**Rules taken from the layouts:**
+- Margin 80 px.
+- Wide empty fields.
+- Overlap is one sheet over one image edge.
+- Captions are small and next to their image.
+- Body text sits in narrow columns.
+
+## 4. Decor assets (`canvas-design`, code-drawn, `assets_v5/`)
+| ID | File | Motif source | Slide |
 |---|---|---|---|
-| A1 | Blush watercolour wash, soft bloom | PNG 1920x1080 | 1, faint on 8 |
-| A2 | Crumpled-paper grain, pink tint | PNG 1920x1080, transparent, low alpha | sheet overlays on 3, 4, 7 |
-| A3 | Halftone dot grain | PNG 1920x1080, transparent | overlay on 5, 6 (faint) |
-| A4 | Script flourish frame (oval with swirls) | PNG transparent | 7 ("my reading"), maybe 1 |
-| A5 | 4-point star set (3 sizes) | drawn as Canva SVG shapes, no PNG | 1, 2, 5, 8 |
-| A6 | Coffee-ring stain, sepia | PNG transparent | 8, maybe 2 |
-| A7 | Dot-label bullets and hairlines | Canva SVG shapes | captions on all slides |
+| D1 | `D1_coffee_ring.png` | L1 coffee-ring poster | 7 |
+| D2 | `D2_halftone.png` | WY halftone grain, L1 exhibition poster halftone | 8 |
+| D5 | `D5_flourish.png` | WL swirl frame | 3 |
+| stars | Canva shapes (4-point) | SN sparkles | 1, 5 |
+| fold / frame lines | Canva shapes | L1 spreads (fold), L1 exhibition poster (frame) | 3, 6, 8 |
 
-A5 and A7 are drawn directly with `insert_shape`, so they need no upload.
+## 5. Literal reference placements (third-party: credits are your decision)
+| File | Crop | Slide | Role |
+|---|---|---|---|
+| FF Half Acre card | `R1_halfacre_watercolour_crop.png`: watercolour band, no text | 1 | top band of the poster |
+| SN Studio Nomad | `R2_studionomad_foil_crop.png`: silver foil strip, no text | 8 | vertical strip beside the title column |
 
-## 5. Old frame elements to delete (every page)
-- The backdrop full-bleed candy rect. It is replaced by a recoloured field.
-- The paper sheet 1840x1000 and its shadow stack (`#eceae5`, and the `#1a1c20` layers at opacity .05–.12).
-- The speckle grain (`#5e5953`) and the wavy hand-lines (`#ed8fbc` / `#8a847c`).
-- The centre fold strip and line, except on slide 6, where a new fold is drawn.
-- The binding band, its hairlines, and the 6 rings with all their layers (holes, lips, shades, highlights).
-- The page-stack edge lines.
-- The crumpled margin strips (`MAHbeyJlCBI`) and the paper overlay (`MAHbe-ziJ2o`), wherever present.
-- Per-slide old decor:
-  - Slide 1: swirls, selection box, cursor, outline boxes.
-  - Slide 2: ellipse outlines, tape.
-  - Slide 6: the pink blocks become sheets.
-  - Slide 7: the tag punch-holes.
-  - Slide 8: the blue taped card and the swatches.
+WY (a photograph of a person) and WL (contains text) are **not** placed literally. They give colour and motif only.
 
-Exact locator IDs are listed per page at edit time. Every deletion is checked to make sure none of the 21 images or any text element is removed.
-
-## 6. Defaults taken (your Phase 1 questions had no answer)
-1. Pink is part of the palette (blush, not candy).
-2. The script is for short headings only. Body text is serif.
-3. Canva fonts are close matches. The fonts named above are standard Canva fonts.
-4. "Portfolio" is redrawn as script outlines (see section 3).
-5. The binder frame is dropped.
-6. The 21 content images keep their original colour. There is no b/w conversion.
-
-## 7. Process
-- GATE 2: assets.
-- GATE 3: slide 1 as the style test.
-- Then slides 2–8, one `edit-design` batch per page, with before/after thumbnails and a commit after your ok.
-- GATE 4: QA against the handover.
+## 6. Build
+1. `copy-design` the source into "Shape as Strategy – v5 (clean build)".
+2. `add_page` ×8 with sampled backgrounds, then `reorder_page` to put them first.
+3. Per page: call 1 creates shapes, images and text. Call 2 formats them (size, colour, image borders). The tool returns the IDs of new elements only after call 1, so formatting needs a second call. This is a deviation from "one call per page".
+4. No elements from old pages are used. The 8 old pages stay at the end for you to delete.

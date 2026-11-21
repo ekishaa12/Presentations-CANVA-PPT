@@ -1,0 +1,192 @@
+{
+ "pink_poster_field (L1 top-left poster)": {
+  "hex": "#f3bdcc",
+  "file": "Layout/Screenshot 2026-11-21 at 00.21.42.png",
+  "box": [
+   60,
+   200,
+   300,
+   420
+  ]
+ },
+ "pink_sheet_on_spread (L1 spread, left page)": {
+  "hex": "#cba4ad",
+  "file": "Layout/Screenshot 2026-11-21 at 00.21.42.png",
+  "box": [
+   100,
+   720,
+   170,
+   860
+  ]
+ },
+ "mauve_spread (L1 FAKE PLASTIC)": {
+  "hex": "#8a6674",
+  "file": "Layout/Screenshot 2026-11-21 at 00.21.42.png",
+  "box": [
+   400,
+   520,
+   520,
+   600
+  ]
+ },
+ "halftone_grey (L1 exhibition poster photo)": {
+  "hex": "#c7c8c4",
+  "file": "Layout/Screenshot 2026-11-21 at 00.21.42.png",
+  "box": [
+   440,
+   120,
+   580,
+   250
+  ]
+ },
+ "poster_white (L1 exhibition poster paper)": {
+  "hex": "#f6f6f5",
+  "file": "Layout/Screenshot 2026-11-21 at 00.21.42.png",
+  "box": [
+   425,
+   70,
+   445,
+   300
+  ]
+ },
+ "coffee_stain (L1 British Council poster)": {
+  "hex": "#b67f4d",
+  "file": "Layout/Screenshot 2026-11-21 at 00.21.42.png",
+  "box": [
+   40,
+   900,
+   300,
+   1150
+  ]
+ },
+ "spread_dark (L1 letter spread bg)": {
+  "hex": "#070804",
+  "file": "Layout/Screenshot 2026-11-21 at 00.21.42.png",
+  "box": [
+   345,
+   1040,
+   365,
+   1270
+  ]
+ },
+ "board_cream (L2 STYLING BOARD card)": {
+  "hex": "#f6f2eb",
+  "file": "Layout/Screenshot 2026-11-21 at 00.22.16.png",
+  "box": [
+   130,
+   395,
+   330,
+   420
+  ]
+ },
+ "pink_page (L2 spreads, pink page)": {
+  "hex": "#dbaeba",
+  "file": "Layout/Screenshot 2026-11-21 at 00.22.16.png",
+  "box": [
+   500,
+   210,
+   570,
+   300
+  ]
+ },
+ "olive_tights (L2 ULTIMATE EDIT photo)": {
+  "hex": "#f1efec",
+  "file": "Layout/Screenshot 2026-11-21 at 00.22.16.png",
+  "box": [
+   185,
+   200,
+   225,
+   280
+  ]
+ },
+ "watercolour_rose (Flower Farm top)": {
+  "hex": "#c16c84",
+  "file": "Reference images/Flower Farm Business Card _ Business Card Design.jpeg",
+  "box": [
+   250,
+   380,
+   420,
+   430
+  ]
+ },
+ "crumpled_blush (Flower Farm back)": {
+  "hex": "#edc7c5",
+  "file": "Reference images/Flower Farm Business Card _ Business Card Design.jpeg",
+  "box": [
+   80,
+   500,
+   600,
+   800
+  ]
+ },
+ "nomad_pink (Studio Nomad top)": {
+  "hex": "#fedef0",
+  "file": "Reference images/Studio Nomad __ Script Family.jpeg",
+  "box": [
+   150,
+   20,
+   450,
+   60
+  ]
+ },
+ "nomad_silver (Studio Nomad foil)": {
+  "hex": "#bbc3d4",
+  "file": "Reference images/Studio Nomad __ Script Family.jpeg",
+  "box": [
+   250,
+   500,
+   500,
+   600
+  ]
+ },
+ "nomad_ink (Studio Nomad script)": {
+  "hex": "#120a12",
+  "file": "Reference images/Studio Nomad __ Script Family.jpeg",
+  "box": [
+   40,
+   60,
+   700,
+   440
+  ]
+ },
+ "withlove_grey (With Love bg)": {
+  "hex": "#d2d2ca",
+  "file": "Reference images/Истории • Instagram.jpeg",
+  "box": [
+   60,
+   40,
+   300,
+   100
+  ]
+ },
+ "withlove_ink (With Love frame line)": {
+  "hex": "#6c756f",
+  "file": "Reference images/Истории • Instagram.jpeg",
+  "box": [
+   30,
+   100,
+   710,
+   600
+  ]
+ },
+ "velle_ink (wooyoung script)": {
+  "hex": "#54585c",
+  "file": "Reference images/wooyoung ateez.jpeg",
+  "box": [
+   320,
+   480,
+   640,
+   700
+  ]
+ },
+ "velle_paper (wooyoung light grain)": {
+  "hex": "#f4f3ee",
+  "file": "Reference images/wooyoung ateez.jpeg",
+  "box": [
+   20,
+   700,
+   200,
+   900
+  ]
+ }
+}
