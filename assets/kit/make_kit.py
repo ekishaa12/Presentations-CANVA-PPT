@@ -327,3 +327,37 @@ if __name__ == '__main__' and 'slide2' in sys.argv[4:]:
     note_png('circles → movement', 'note_circles_movement')
     note_png('curtains,\nnot\nwalls', 'note_curtains_not_walls')
     note_png('discovered\nroom by\nroom.', 'note_discovered_room_by_room')
+
+# ---------- tracked serif caps + script/serif lockup ----------
+def tracked_layer(txt, font, size, track):
+    f = ImageFont.truetype(font, size); tmp = ImageDraw.Draw(Image.new('L', (10, 10)))
+    ws = [tmp.textlength(c, font=f) for c in txt]
+    W = int(sum(ws) + track * (len(txt) - 1)); asc, desc = f.getmetrics(); H = asc + desc
+    m = Image.new('L', (W + 20, H + 20), 0); d = ImageDraw.Draw(m); x = 10
+    for c, w in zip(txt, ws): d.text((x, 10), c, font=f, fill=255); x += w + track
+    return m.crop(m.getbbox())
+
+def tracked_png(txt, size, col, name, track, pad=40, font=None):
+    m = tracked_layer(txt, font or COR, size, track)
+    W, H = m.size[0] + 2 * pad, m.size[1] + 2 * pad
+    c = Image.new('L', (W, H), 0); c.paste(m, (pad, pad))
+    a = np.asarray(c, float) / 255; save_rgba(col, a * (.9 + .1 * fbm(W, H, 2, 30)), name)
+
+def lockup_png(script, caps, name, col, s_size=300, c_size=110, track=26, pad=40, overlap=.32, xo=.35):
+    f = ImageFont.truetype(PIN, s_size); tmp = ImageDraw.Draw(Image.new('L', (10, 10)))
+    bb = tmp.textbbox((0, 0), script, font=f)
+    sm = Image.new('L', (bb[2] - bb[0] + 20, bb[3] - bb[1] + 20), 0)
+    ImageDraw.Draw(sm).text((10 - bb[0], 10 - bb[1]), script, font=f, fill=255); sm = sm.crop(sm.getbbox())
+    cm = tracked_layer(caps, COR, c_size, track)
+    W = max(sm.size[0], int(sm.size[0] * xo) + cm.size[0]) + 2 * pad
+    oy = int(sm.size[1] * (1 - overlap))
+    H = max(oy + cm.size[1], sm.size[1]) + 2 * pad
+    c = Image.new('L', (W, H), 0)
+    c.paste(cm, (pad + int(sm.size[0] * xo), pad + oy))
+    c = ImageChops.lighter(c, Image.new('L', (W, H), 0)); s = Image.new('L', (W, H), 0); s.paste(sm, (pad, pad))
+    c = ImageChops.lighter(c, s)
+    a = np.asarray(c, float) / 255; save_rgba(col, a * (.9 + .1 * fbm(W, H, 2, 30)), name)
+
+if __name__ == '__main__' and 'slide3' in sys.argv[4:]:
+    tracked_png('PRETTY PIXIE', 140, INK, 'title_pretty_pixie', track=22)
+    lockup_png('Why', 'ESMOD', 'title_why_esmod', INK, xo=1.02, overlap=.55)
