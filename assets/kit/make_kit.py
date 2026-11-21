@@ -293,3 +293,37 @@ if __name__ == '__main__':
             text_png('ES', PIN, 300, INK, 'es_script_ink', pad=40)
         if f in ('cuts', 'all'): wl_frame(); sn_swashes()
         if f in ('torn', 'all'): torn_strip('#f6d5de', 'torn_edge_pink')
+
+# ---------- handwritten notes (Reenie Beanie, marker ink) with drawn arrows ----------
+MARKER = rgb('#222025')
+def note_png(txt, name, size=96, col=None, font=None, pad=30):
+    col = MARKER if col is None else col
+    f = ImageFont.truetype(font or REE, size); S = 2
+    lines = txt.split('\n'); lh = int(size * 1.0)
+    tmp = ImageDraw.Draw(Image.new('L', (10, 10)))
+    def seg_w(s): b = tmp.textbbox((0, 0), s, font=f); return b[2] - b[0]
+    aw = int(size * 1.1)
+    widths = [sum(seg_w(p) for p in ln.split('→')) + aw * ln.count('→') for ln in lines]
+    W = max(widths) + 2 * pad; H = lh * len(lines) + 2 * pad + int(size * .3)
+    m = Image.new('L', (W * S, H * S), 0); d = ImageDraw.Draw(m)
+    fS = ImageFont.truetype(font or REE, size * S)
+    for i, ln in enumerate(lines):
+        x = pad * S; y = (pad + i * lh) * S
+        parts = ln.split('→')
+        for j, p in enumerate(parts):
+            d.text((x, y), p, font=fS, fill=255); x += seg_w(p) * S
+            if j < len(parts) - 1:
+                cy = y + int(size * .62) * S; x0 = x + int(size * .12) * S; x1 = x + aw * S - int(size * .18) * S
+                pts = [(x0 + (x1 - x0) * t, cy + math.sin(t * 3.1) * size * .04 * S) for t in np.linspace(0, 1, 40)]
+                d.line(pts, fill=255, width=max(2, int(size * .05 * S)))
+                d.line([(x1, cy), (x1 - size * .22 * S, cy - size * .16 * S)], fill=255, width=max(2, int(size * .05 * S)))
+                d.line([(x1, cy), (x1 - size * .22 * S, cy + size * .14 * S)], fill=255, width=max(2, int(size * .05 * S)))
+                x += aw * S
+    a = np.asarray(m.resize((W, H), Image.LANCZOS), float) / 255
+    save_rgba(col, a * (.85 + .15 * fbm(W, H, 2, 40)), name)
+
+if __name__ == '__main__' and 'slide2' in sys.argv[4:]:
+    text_png('nova', PIN, 340, INK, 'title_nova', pad=50)
+    note_png('circles → movement', 'note_circles_movement')
+    note_png('curtains,\nnot\nwalls', 'note_curtains_not_walls')
+    note_png('discovered\nroom by\nroom.', 'note_discovered_room_by_room')
