@@ -221,6 +221,17 @@ def foil(W=1920, H=640):
     col += ((fbm(W, H, 3, 300) - .5) * 10)[..., None]
     Image.fromarray(np.clip(col, 0, 255).astype(np.uint8)).save(f'{OUT}/foil_sleeve.png'); print('ok foil_sleeve')
 
+def torn_strip(hexc, name, W=1920, H=48):
+    yy, xx = np.mgrid[0:H, 0:W]
+    edge = 18 + (fbm(W, 1, 6, 30)[0] - .5) * 26 + (rng.random(W) - .5) * 3
+    a = np.clip((edge[None, :] - yy) / 1.2 + .5, 0, 1)
+    fib = np.clip((edge[None, :] + 4 - yy) / 2.5, 0, 1) * .5           # paler fibre lip
+    col = np.zeros((H, W, 3)) + rgb(hexc)
+    col = col * (1 - (fib - a * .5)[..., None] * .0) + ((fbm(W, H, 4, 120) - .5) * 14)[..., None]
+    alpha = np.maximum(a, fib * .6)
+    out = np.zeros((H, W, 4)); out[..., :3] = np.clip(col, 0, 255); out[..., 3] = alpha * 255
+    Image.fromarray(out.astype(np.uint8), 'RGBA').save(f'{OUT}/{name}.png'); print('ok', name)
+
 # ---------- literal reference cutouts ----------
 def ink_cut(src, box, col, name, scale=3, thr_pct=12, keep=None):
     im = Image.open(src).convert('L').crop(box)
@@ -275,9 +286,10 @@ if __name__ == '__main__':
             sheet(760, 340, '#bbbac1', 'card_label_grey', pad=24, fibre=.03)
         if f in ('marks', 'all'):
             monogram(INK, 'monogram_es_ink'); monogram(CREAM, 'monogram_es_cream'); stamp()
-            dotmatrix('Ekisha Sachdeva', 'dotmatrix_name'); dotmatrix('Ekisha Sachdeva', 'dotmatrix_name_ink', ink=True); dotmatrix('Ekisha Sachdeva', 'dotmatrix_name_ink_small', size=120, step=5, ink=True, rad=1.9)
+            dotmatrix('Ekisha Sachdeva', 'dotmatrix_name'); dotmatrix('Ekisha Sachdeva', 'dotmatrix_name_ink', ink=True); dotmatrix('Ekisha Sachdeva', 'dotmatrix_name_ink_small', size=120, step=5, ink=True, rad=1.9); dotmatrix('Ekisha Sachdeva', 'dotmatrix_name_ink_bold', size=120, step=4, ink=True, rad=2.0)
             text_png('Ekisha Sachdeva', PIN, 150, INK, 'signature_ink')
             text_png('Portfolio', PIN, 420, INK, 'title_portfolio_ink', pad=60)
             text_png('Portfolio', PIN, 420, CREAM, 'title_portfolio_cream', pad=60)
             text_png('ES', PIN, 300, INK, 'es_script_ink', pad=40)
         if f in ('cuts', 'all'): wl_frame(); sn_swashes()
+        if f in ('torn', 'all'): torn_strip('#f6d5de', 'torn_edge_pink')
