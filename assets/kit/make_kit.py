@@ -405,3 +405,17 @@ def script_amp(word, name, s_size=220, a_size=150, pad=50, gap=30):
 
 if __name__ == '__main__' and 'slide8b' in sys.argv[4:]:
     script_amp('Sources', 'title_sources')
+
+def rings_strong(W=900, H=900):
+    yy, xx = np.mgrid[0:H, 0:W]; a = np.zeros((H, W))
+    warp = (fbm(W, H, 4, 5) - .5) * 34
+    for cx, cy, r, s in [(450, 450, 340, 1.0), (560, 390, 260, .75)]:
+        d = np.hypot(xx - cx, yy - cy) + warp
+        ring = np.exp(-((d - r) / 7) ** 2) * 1.0 + np.exp(-((d - r + 22) / 22) ** 2) * .35
+        gap = (np.sin(np.arctan2(yy - cy, xx - cx) * 2 + s * 4) + 1) / 2
+        a += s * (ring * (.45 + .55 * gap) + np.clip(1 - d / r, 0, 1) * .12)
+    col = rgb('#a8743f')
+    save_rgba(col, np.clip(a * (.8 + .4 * fbm(W, H, 3, 60)), 0, 1), 'coffee_rings_strong')
+
+if __name__ == '__main__' and 'rings2' in sys.argv[4:]:
+    rings_strong()
