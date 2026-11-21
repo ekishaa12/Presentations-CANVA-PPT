@@ -200,7 +200,7 @@ def stamp():
     wear = np.clip(fbm(W, H, 4, 40) * 1.6 - .25, 0, 1)
     save_rgba(ROSE, a * wear * .9, 'stamp_es')
 
-def dotmatrix(txt, name, size=230, step=7):
+def dotmatrix(txt, name, size=230, step=7, ink=False):
     f = ImageFont.truetype(PIN, size); tmp = ImageDraw.Draw(Image.new('L', (10, 10)))
     bb = tmp.textbbox((0, 0), txt, font=f); W, H = bb[2] - bb[0] + 60, bb[3] - bb[1] + 60
     m = Image.new('L', (W, H), 0); ImageDraw.Draw(m).text((30 - bb[0], 30 - bb[1]), txt, font=f, fill=255)
@@ -209,7 +209,7 @@ def dotmatrix(txt, name, size=230, step=7):
     for y in range(0, H, step):
         for x in range((y // step % 2) * step // 2, W, step):
             if mm[y, x] > 128:
-                t = x / W; c = (1 - t) * rgb('#8d8f99') + t * rgb('#c9cbd3')
+                t = x / W; c = INK if ink else (1 - t) * rgb('#8d8f99') + t * rgb('#c9cbd3')
                 r = 2.1 * S; d.ellipse([x * S - r, y * S - r, x * S + r, y * S + r], fill=tuple(int(v) for v in c) + (255,))
     out.resize((W, H), Image.LANCZOS).save(f'{OUT}/{name}.png'); print('ok', name, W, H)
 
@@ -275,7 +275,7 @@ if __name__ == '__main__':
             sheet(760, 340, '#bbbac1', 'card_label_grey', pad=24, fibre=.03)
         if f in ('marks', 'all'):
             monogram(INK, 'monogram_es_ink'); monogram(CREAM, 'monogram_es_cream'); stamp()
-            dotmatrix('Ekisha Sachdeva', 'dotmatrix_name')
+            dotmatrix('Ekisha Sachdeva', 'dotmatrix_name'); dotmatrix('Ekisha Sachdeva', 'dotmatrix_name_ink', ink=True)
             text_png('Ekisha Sachdeva', PIN, 150, INK, 'signature_ink')
             text_png('Portfolio', PIN, 420, INK, 'title_portfolio_ink', pad=60)
             text_png('Portfolio', PIN, 420, CREAM, 'title_portfolio_cream', pad=60)
