@@ -1,3 +1,42 @@
+# DA CHARTER — Shape as Strategy · ESMOD Portfolio — "Pink Static" (editorial zine)
+
+**This direction replaces the "Archive Blush" sections below (kept for history).** Primary reference: `Reference images/zine_karmic_lesson.jpg` (Gen-Z editorial zine: giant overlapping black grotesk, pink duotone/halftone imagery, monospace body columns, ghost type, vertical titles, running header).
+
+## 1. Mood
+An ESMOD/IFM master's student's printed zine: risograph pink, black ink, white paper, a red ballpoint marking up the pages. Fewer textures, more typographic detail. Every slide reads as a magazine spread (left page | gutter at x 960 | right page).
+
+## 2. Palette
+| Role | Hex |
+|---|---|
+| Paper white | `#fffafb` |
+| Blush page | `#fbe6ec` |
+| Riso pink (halftone, ghost type) | `#ec9cba` / `#f2c6d3` |
+| Display ink | `#141214` |
+| Body ink | `#1e1b1d` |
+| Red ballpoint (scribbles, notes) | `#b5304b` |
+| Graphite | `#4a4a4a` |
+
+## 3. Type
+| Role | Font | How |
+|---|---|---|
+| Display (titles, numbers) | **Inter Display SemiBold**, tracking −6 %, leading 0.74, lines overlap, words split, cropped by page edge | PNG, alt = exact string |
+| Body, captions, header row | **Space Mono** | live text (FONT_TODO.md); body 17–19 px justified in 300–380 px columns |
+| Margin notes | Reenie Beanie in red ballpoint | PNG, alt = exact string |
+| Ghost type | Space Mono 190 px, `#f2c6d3`, 50–80 % opacity | decor PNG (words already on the slide) |
+
+## 4. Layout rules
+1. Spread grid: gutter shadow at x 960; margins 70 px; running header (3 mono labels) at y 28; page number bottom.
+2. One giant black display word per spread, allowed to bleed off the page and over images.
+3. Images keep their ratio; pink halftone AI art and ghost type sit behind at reduced opacity.
+4. Body text only in narrow mono columns on white/blush paper, never on busy imagery.
+5. Red ballpoint: circle, underline, arrow, asterisk, bracket, tick — 3–6 marks per spread, always pointing at content.
+6. Details over textures: print marks, registration targets, barcode, page numbers, folio.
+
+## 5. Banned
+Binder, rings, tape, price tags, blue selection UI, rotated giant script titles, parchment/coffee-ring "Pinterest board" look, script fonts, old hexes.
+
+---
+
 # DA CHARTER — Shape as Strategy · ESMOD Portfolio
 
 Design `DAHbgasWgM4`. Build pages 1–8. Pages 9–16 are the archive. Content is in `CONTENT_MANIFEST.json` (frozen). Sources:
